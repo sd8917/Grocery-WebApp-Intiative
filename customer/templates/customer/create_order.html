@@ -1,0 +1,57 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-7 offset-lg-1">
+			<form class="create-form" method="POST" enctype="multipart/form-data">{% csrf_token %}
+
+				<!-- Name -->
+				<div class="form-group">
+					<label for="id_title">CutomerName</label>
+					<input class="form-control" type="text" name="customer_name" id="id_title" placeholder="Title" required autofocus>
+				</div>
+
+				<!-- CutomerNumber -->
+				<div class="form-group">
+					<label for="id_title">CutomerNumber</label>
+					<input class="form-control" type="number" name="customer_number" id="id_title" placeholder="Cutomer Number" required autofocus>
+				</div>
+
+				
+				<!-- Product -->
+				<div class="form-group">
+					<label for="id_title">Product</label>
+					<input class="form-control" type="text" name="product" id="id_product" placeholder="Product" required autofocus>
+				</div>
+
+				<!-- Place -->
+				<div class="form-group">
+					<label for="id_title">Place</label>
+					<input class="form-control" type="text" name="place" id="id_place" placeholder="Place" required autofocus>
+				</div>
+
+
+				<!-- Image -->
+				<div class="form-group">
+					<label for="id_image">Image</label>
+					<input  type="file" name="image" id="id_image" accept="image/*" required>
+				</div>
+
+				<!-- Submit btn -->
+				<button class="submit-button btn btn-lg btn-primary btn-block" type="submit">Order</button>
+			</form>	
+		</div>
+	</div>
+</div>
+
+
+{% endblock content %}
+
+<!-- <h1>
+
+	Create your query here
+
+</h1> -->
